@@ -1,0 +1,15 @@
+<html>
+	<div id="accel"></div>
+	<body>
+		<script>
+			window.addEventListener('devicemotion', function(event) {
+				var x, y, z;
+				x = event.accelerationIncludingGravity.x;
+				y = event.accelerationIncludingGravity.y;
+				z = event.accelerationIncludingGravity.z;
+				document.getElementById("accel").innerHTML = Math.pow(Math.pow(x,2) + Math.pow(y,2) + Math.pow(z,2), 0.5);
+			});
+		</script>
+	</body>
+
+</html>
